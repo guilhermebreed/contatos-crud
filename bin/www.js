@@ -2,8 +2,7 @@ var app = require('../app');
 var debug = require('debug')('mean-app:server');
 var http = require('http');
 
-//var port = normalizePort(process.env.PORT || '8080');
-const port = process.env.PORT || 8080;
+var port = normalizePort(process.env.PORT || '8080');
 
 app.set('port', port);
 

@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>Editar Contato</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateContato(contato._id)" #contatoForm="ngForm">
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input type="text" class="form-control" [(ngModel)]="contato.nome" placeholder="Guilherme Silva Alves" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Data de Nascimento</label>
+          <input type="text" class="form-control" [(ngModel)]="contato.dataNascimento" [mask]="maskDate" placeholder="00/00/0000" name="dataNascimento" required>
+        </div>
+        <div class="form-group">
+          <label for="name">E-mail</label>
+          <input type="text" class="form-control" [(ngModel)]="contato.email" [mask]="maskEmail" placeholder="email@email.com" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="name">Telefone</label>
+          <input type="text" class="form-control" [(ngModel)]="contato.telefone" [mask]="maskPhone" placeholder="(34) 99999-4444" name="telefone" required>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!contatoForm.form.valid">Atualizar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

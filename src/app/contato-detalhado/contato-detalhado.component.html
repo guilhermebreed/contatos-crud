@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Contato Detalhado</h1>
+   <div class="row">
+    <div class="col-md-6">
+      <dl class="list">
+        <dt>Nome</dt>
+        <dd>{{ contato.nome }}</dd>
+        <dt>Data de Nascimento</dt>
+        <dd>{{ contato.dataNascimento }}</dd>
+        <dt>E-mail</dt>
+        <dd>{{ contato.email }}</dd>
+        <dt>Telefone</dt>
+        <dd>{{ contato.telefone }}</dd>
+    </dl>
+  </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <a [routerLink]="['/contato-editar', contato._id]" class="btn btn-success">Editar</a>
+        <button class="btn btn-danger" type="button" (click)="deleteContato(contato._id)">Deletar</button>
+    </div>
+
+    </div>
+  </div>
+</div>
